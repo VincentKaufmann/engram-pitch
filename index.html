@@ -711,7 +711,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
         <p style="font-size:14px; margin-top:8px;">Each token is final. No backtracking. The model commits to an answer before it understands the full problem.</p>
         <div style="margin-top:14px; padding-top:12px; border-top:1px solid rgba(0,212,255,0.15);">
           <div style="font-size:11px; color:var(--accent); font-weight:600; letter-spacing:1px; margin-bottom:4px;">SLICK V3</div>
-          <p style="font-size:12px; color:var(--accent); margin:0;">GDiT iteratively unmasks &mdash; revises uncertain cells, keeps confident ones. 5 refinement steps with metacognitive re-masking.</p>
+          <p style="font-size:12px; color:var(--accent); margin:0;">nGDiT iteratively unmasks &mdash; revises uncertain cells, keeps confident ones. 5 refinement steps with metacognitive re-masking.</p>
         </div>
       </div>
       <div class="card text-center" style="padding-bottom:16px;">
@@ -834,7 +834,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
         <span class="novel-badge" style="background:rgba(0,212,255,0.15); color:var(--accent); display:inline-block; margin-bottom:8px;">1</span>
         <h4 style="font-size:15px;">Diffusion for Reasoning</h4>
         <p style="font-size:12px; margin-top:6px; line-height:1.5;">Apply Stable Diffusion's denoising math to <em>abstract reasoning</em>, not image generation. Iterative refinement over discrete grids &mdash; the model sees the whole problem, forms hypotheses, and revises. 5 steps, not 50. 65M params, not 1.5B.</p>
-        <div style="font-size:10px; color:var(--accent); margin-top:8px;">Grid Diffusion Transformer (GDiT)</div>
+        <div style="font-size:10px; color:var(--accent); margin-top:8px;">Nested Grid Diffusion Transformer (nGDiT)</div>
       </div>
       <div class="card" style="border-left: 3px solid var(--accent2); padding:20px;">
         <span class="novel-badge" style="background:rgba(99,102,241,0.15); color:var(--accent2); display:inline-block; margin-bottom:8px;">2</span>
@@ -857,7 +857,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
       <div class="card" style="border-left: 3px solid var(--orange); padding:20px;">
         <span class="novel-badge" style="background:rgba(245,158,11,0.15); color:var(--orange); display:inline-block; margin-bottom:8px;">5</span>
         <h4 style="font-size:15px;">Diffusion Within Diffusion</h4>
-        <p style="font-size:12px; margin-top:6px; line-height:1.5;">The same GDiT serves as both output generator (5 steps, full fidelity) AND imagination engine (2-3 steps, approximate). Inner diffusion for mental simulation, outer diffusion for real output. One architecture, two roles. Confidence emerges from denoising quality itself.</p>
+        <p style="font-size:12px; margin-top:6px; line-height:1.5;">The same nGDiT serves as both output generator (5 steps, full fidelity) AND imagination engine (2-3 steps, approximate). Inner diffusion for mental simulation, outer diffusion for real output. One architecture, two roles. Confidence emerges from denoising quality itself.</p>
         <div style="font-size:10px; color:var(--orange); margin-top:8px;">Unified inner/outer reasoning</div>
       </div>
       <div class="card" style="border-left: 3px solid var(--pink); padding:20px;">
@@ -902,7 +902,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
           <div class="arch-mini-arrow">&#9654;</div>
           <div class="arch-mini-box">EXPERTS<span class="arch-mini-sub">MoE top-2</span></div>
           <div class="arch-mini-arrow">&#9654;</div>
-          <div class="arch-mini-box">GDiT<span class="arch-mini-sub">diffusion</span></div>
+          <div class="arch-mini-box">nGDiT<span class="arch-mini-sub">diffusion</span></div>
           <div class="arch-mini-arrow">&#9654;</div>
           <div class="arch-mini-box">OUTPUT</div>
         </div>
@@ -948,7 +948,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
           <div class="arch-mini-arrow arch-lit-arrow" style="--arch-color:var(--accent2);">&#9654;</div>
           <div class="arch-mini-box arch-lit" style="--arch-color:var(--accent2);">EXPERTS<span class="arch-mini-sub">MoE top-2</span></div>
           <div class="arch-mini-arrow">&#9654;</div>
-          <div class="arch-mini-box">GDiT<span class="arch-mini-sub">diffusion</span></div>
+          <div class="arch-mini-box">nGDiT<span class="arch-mini-sub">diffusion</span></div>
           <div class="arch-mini-arrow">&#9654;</div>
           <div class="arch-mini-box">OUTPUT</div>
         </div>
@@ -983,7 +983,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
         </div>
       </div>
 
-      <!-- ── PAGE 3: GDiT Diffusion Reasoning ── -->
+      <!-- ── PAGE 3: nGDiT Diffusion Reasoning ── -->
       <div class="explainer-page" data-page="2">
         <div class="arch-mini">
           <div class="arch-mini-box arch-done" style="--arch-color:var(--green);">STATE<span class="arch-mini-sub">72-dim FiLM</span></div>
@@ -994,12 +994,12 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
           <div class="arch-mini-arrow">&#9654;</div>
           <div class="arch-mini-box arch-done" style="--arch-color:var(--accent2);">EXPERTS<span class="arch-mini-sub">MoE top-2</span></div>
           <div class="arch-mini-arrow arch-lit-arrow" style="--arch-color:var(--accent);">&#9654;</div>
-          <div class="arch-mini-box arch-lit" style="--arch-color:var(--accent);">GDiT<span class="arch-mini-sub">diffusion</span></div>
+          <div class="arch-mini-box arch-lit" style="--arch-color:var(--accent);">nGDiT<span class="arch-mini-sub">diffusion</span></div>
           <div class="arch-mini-arrow">&#9654;</div>
           <div class="arch-mini-box">OUTPUT</div>
         </div>
 
-        <!-- ═══ GDiT ENGINE BLUEPRINT ═══ -->
+        <!-- ═══ nGDiT ENGINE BLUEPRINT ═══ -->
         <div style="max-width:1100px; width:100%; margin:0 auto;">
           <svg viewBox="0 0 1100 420" style="width:100%; height:auto; display:block;">
             <defs>
@@ -1031,7 +1031,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
 
             <!-- ═══ ENGINE LABEL ═══ -->
             <rect x="460" y="58" width="180" height="24" rx="12" fill="#060810" stroke="#00d4ff" stroke-width="1.5"/>
-            <text x="550" y="74" fill="#00d4ff" font-size="10" text-anchor="middle" font-family="JetBrains Mono,monospace" font-weight="700">GDiT ENGINE &middot; 15M params</text>
+            <text x="550" y="74" fill="#00d4ff" font-size="10" text-anchor="middle" font-family="JetBrains Mono,monospace" font-weight="700">nGDiT ENGINE &middot; 15M params</text>
 
             <!-- ═══ INPUT: Masked Grid (left side) ═══ -->
             <g transform="translate(42, 140)">
@@ -1184,7 +1184,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
               <text x="72" y="30" fill="#475569" font-size="7" text-anchor="middle" font-family="Inter,sans-serif">Each word is final. No eraser.</text>
               <text x="72" y="42" fill="#475569" font-size="7" text-anchor="middle" font-family="Inter,sans-serif">1D serial. Flattens grids.</text>
               <line x1="10" y1="48" x2="135" y2="48" stroke="#1e293b" stroke-width="1"/>
-              <text x="72" y="60" fill="#00d4ff" font-size="9" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700">GDiT: ALL AT ONCE</text>
+              <text x="72" y="60" fill="#00d4ff" font-size="9" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700">nGDiT: ALL AT ONCE</text>
               <text x="72" y="72" fill="#00d4ff" font-size="7" text-anchor="middle" font-family="Inter,sans-serif" opacity="0.7">Refine iteratively. 2D native.</text>
             </g>
 
@@ -1207,7 +1207,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
           <div style="padding:16px 20px; border-radius:10px; border:1px solid rgba(0,212,255,0.15); background:rgba(0,212,255,0.03);">
             <div style="font-size:11px; color:var(--accent); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; font-weight:600;">What It Does</div>
             <p style="font-size:13px; line-height:1.6; color:var(--muted); margin:0;">
-              Instead of predicting one token at a time (like GPT), the GDiT starts with a <strong style="color:var(--text);">fully masked grid</strong> and iteratively reveals cells in order of confidence. High-confidence cells lock in first. Uncertain cells get re-masked and retried. The same architecture doubles as a <strong style="color:var(--accent);">world model</strong> &mdash; run fewer steps for a quick mental preview, more steps for the final answer.
+              Instead of predicting one token at a time (like GPT), the nGDiT starts with a <strong style="color:var(--text);">fully masked grid</strong> and iteratively reveals cells in order of confidence. High-confidence cells lock in first. Uncertain cells get re-masked and retried. The same architecture doubles as a <strong style="color:var(--accent);">world model</strong> &mdash; run fewer steps for a quick mental preview, more steps for the final answer.
             </p>
           </div>
           <div style="padding:16px 20px; border-radius:10px; border:1px solid rgba(0,212,255,0.15); background:rgba(0,212,255,0.03);">
@@ -1233,7 +1233,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
           <div class="arch-mini-arrow">&#9654;</div>
           <div class="arch-mini-box arch-done" style="--arch-color:var(--accent2);">EXPERTS<span class="arch-mini-sub">MoE top-2</span></div>
           <div class="arch-mini-arrow">&#9654;</div>
-          <div class="arch-mini-box arch-done" style="--arch-color:var(--accent);">GDiT<span class="arch-mini-sub">diffusion</span></div>
+          <div class="arch-mini-box arch-done" style="--arch-color:var(--accent);">nGDiT<span class="arch-mini-sub">diffusion</span></div>
           <div class="arch-mini-arrow arch-lit-arrow" style="--arch-color:var(--orange);">&#x21BB;</div>
           <div class="arch-mini-box arch-lit" style="--arch-color:var(--orange);">IMAGINE<span class="arch-mini-sub">2-3 step sim</span></div>
         </div>
@@ -1279,7 +1279,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
           <div class="arch-mini-arrow">&#9654;</div>
           <div class="arch-mini-box arch-done" style="--arch-color:var(--accent2);">EXPERTS<span class="arch-mini-sub">MoE top-2</span></div>
           <div class="arch-mini-arrow">&#9654;</div>
-          <div class="arch-mini-box arch-done" style="--arch-color:var(--accent);">GDiT<span class="arch-mini-sub">diffusion</span></div>
+          <div class="arch-mini-box arch-done" style="--arch-color:var(--accent);">nGDiT<span class="arch-mini-sub">diffusion</span></div>
           <div class="arch-mini-arrow arch-lit-arrow" style="--arch-color:var(--pink);">&#x21BB;</div>
           <div class="arch-mini-box arch-lit" style="--arch-color:var(--pink);">CHECK<span class="arch-mini-sub">PRM re-mask</span></div>
         </div>
@@ -1325,7 +1325,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
           <div class="arch-mini-arrow arch-lit-arrow" style="--arch-color:var(--accent3);">&#9654;</div>
           <div class="arch-mini-box arch-done" style="--arch-color:var(--accent2);">EXPERTS<span class="arch-mini-sub">MoE top-2</span></div>
           <div class="arch-mini-arrow arch-lit-arrow" style="--arch-color:var(--accent3);">&#9654;</div>
-          <div class="arch-mini-box arch-lit" style="--arch-color:var(--accent3);">GDiT<span class="arch-mini-sub">outer: 5 steps</span></div>
+          <div class="arch-mini-box arch-lit" style="--arch-color:var(--accent3);">nGDiT<span class="arch-mini-sub">outer: 5 steps</span></div>
           <div class="arch-mini-arrow arch-lit-arrow" style="--arch-color:var(--orange);">&#x21BB;</div>
           <div class="arch-mini-box arch-lit" style="--arch-color:var(--orange);">IMAGINE<span class="arch-mini-sub">inner: 2-3</span></div>
           <div class="arch-mini-arrow arch-lit-arrow" style="--arch-color:var(--pink);">&#x21BB;</div>
@@ -1337,7 +1337,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
           <div class="card" style="border-color:var(--accent3);">
             <h4 style="color:var(--accent3); margin-bottom:12px;">Diffusion Within Diffusion</h4>
             <p style="font-size:15px; line-height:1.7;">
-              Here's where it all clicks. The mental simulation (page 4) and the actual output (page 3) both use the <em>same architecture</em> — the GDiT. The only difference is how many steps they run.
+              Here's where it all clicks. The mental simulation (page 4) and the actual output (page 3) both use the <em>same architecture</em> — the nGDiT. The only difference is how many steps they run.
             </p>
             <p style="font-size:15px; line-height:1.7; margin-top:12px;">
               <strong>Inner diffusion</strong> (2-3 steps): quick imagination — "what if I tried this?" Rough, fast, disposable.
@@ -1357,7 +1357,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
             </p>
             <div style="margin-top:20px; padding:16px; border-radius:8px; background:rgba(139,92,246,0.08); border:1px solid rgba(139,92,246,0.2);">
               <div style="font-size:12px; color:var(--accent3); font-weight:600; margin-bottom:8px;">MATH &amp; RESEARCH</div>
-              <div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--accent3); margin-bottom:8px;">Inner: x̂ = GDiT(x, steps=2) → conf(x̂)<br>Outer: y = GDiT(x_best, steps=5) → output<br>No separate critic: denoiser IS the judge</div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--accent3); margin-bottom:8px;">Inner: x̂ = nGDiT(x, steps=2) → conf(x̂)<br>Outer: y = nGDiT(x_best, steps=5) → output<br>No separate critic: denoiser IS the judge</div>
               <div style="font-size:12px; color:var(--muted); line-height:1.6;"><strong>Diffuser</strong> (Janner et al., 2022) — planning as denoising in trajectory space. <strong>UniSim</strong> (Yang et al., 2023) — unified simulation via generative models. <strong>No direct analog</strong> — Ha &amp; Schmidhuber (2018), Dreamer, MuZero all use separate world model networks. Engram uses one.</div>
               <div style="font-size:12px; color:var(--accent3); margin-top:6px; font-style:italic;">Novel contribution — no prior architecture unifies output generation and world simulation in a single network.</div>
             </div>
@@ -1382,7 +1382,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
         <div class="flow-arrow">&#9654;</div>
         <div class="flow-step" data-step="2" style="--flow-color:var(--accent);">
           <div class="flow-icon">3</div>
-          <div class="flow-label">GDiT<br>Reasoning</div>
+          <div class="flow-label">nGDiT<br>Reasoning</div>
         </div>
         <div class="flow-arrow">&#9654;</div>
         <div class="flow-step" data-step="3" style="--flow-color:var(--orange);">
@@ -1431,7 +1431,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
       <div class="connector"></div>
       <div class="arch-layer" style="border-color:var(--accent3); background:rgba(139,92,246,0.05);">
         <div class="layer-name" style="color:var(--accent3);">L4: REASONING</div>
-        <div class="layer-desc">Autoregressive &harr; GDiT Diffusion &harr; Tree Search &harr; Memory Retrieval</div>
+        <div class="layer-desc">Autoregressive &harr; nGDiT Diffusion &harr; Tree Search &harr; Memory Retrieval</div>
         <div class="layer-badge" style="background:rgba(139,92,246,0.15); color:var(--accent3);">4 modes, 1 router</div>
         <div style="font-size:12px; color:var(--muted); margin-top:6px; font-style:italic;">Picks the right thinking strategy for each problem — write, imagine, search, or remember</div>
       </div>
@@ -1508,7 +1508,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
           <li>V2 Biological Architecture (72-dim state, 8 layers)</li>
           <li>Associative Memory System with reflexive recall</li>
           <li>PseudoDeepStack Vision Pipeline (novel 3-layer extraction)</li>
-          <li>GDiT Reasoning Engine &amp; Diffusion World Model</li>
+          <li>nGDiT Reasoning Engine &amp; Diffusion World Model</li>
           <li>42-function DSL + 404 ARC reasoning traces</li>
           <li>ContextEngine &mdash; 5-technique context compression</li>
           <li>Autonomous watchdog system &mdash; AI debugs overnight while the engineer sleeps</li>
@@ -1532,14 +1532,14 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
-<!-- SLIDE 7: GDiT DEEP DIVE -->
+<!-- SLIDE 7: nGDiT DEEP DIVE -->
 <!-- ═══════════════════════════════════════════ -->
 <div class="slide" data-slide="9">
   <div class="full-width">
     <div class="label mb-16">DEEP DIVE</div>
     <h2>Grid Diffusion Transformer &mdash; <span class="accent">The Reasoning Engine</span></h2>
 
-    <!-- ═══ GDiT DEEP DIVE — SCHEMATIC LAYOUT ═══ -->
+    <!-- ═══ nGDiT DEEP DIVE — SCHEMATIC LAYOUT ═══ -->
     <div style="max-width:1100px; margin:28px auto 0; width:100%;">
       <svg viewBox="0 0 1100 560" style="width:100%; height:auto; display:block;">
         <defs>
@@ -1664,7 +1664,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
           <circle cx="26" cy="26" r="14" fill="rgba(236,72,153,0.12)" stroke="#ec4899" stroke-width="1"/>
           <text x="26" y="30" fill="#ec4899" font-size="12" text-anchor="middle" font-family="Inter,sans-serif" font-weight="800">W</text>
           <text x="52" y="24" fill="#ec4899" font-size="12" font-family="Inter,sans-serif" font-weight="700">World Model (Free)</text>
-          <text x="52" y="40" fill="#64748b" font-size="9" font-family="Inter,sans-serif">Same GDiT, 2-3 steps instead of 5</text>
+          <text x="52" y="40" fill="#64748b" font-size="9" font-family="Inter,sans-serif">Same nGDiT, 2-3 steps instead of 5</text>
           <text x="18" y="60" fill="#475569" font-size="8" font-family="JetBrains Mono,monospace">blurry = uncertain, clear = confident</text>
           <text x="18" y="74" fill="#475569" font-size="8" font-family="JetBrains Mono,monospace">mental simulation, no extra network</text>
           <text x="255" y="78" fill="#ec4899" font-size="8" font-family="JetBrains Mono,monospace" text-anchor="end" opacity="0.6">JEPA + Dreamer</text>
@@ -1682,10 +1682,10 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
         <!-- ═══ VS STABLE DIFFUSION — compact comparison strip ═══ -->
         <g transform="translate(720, 40)">
           <rect width="340" height="90" rx="10" fill="#0a0f18" stroke="#1e293b" stroke-width="1"/>
-          <text x="170" y="18" fill="#475569" font-size="9" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" letter-spacing="1">GDiT vs STABLE DIFFUSION</text>
+          <text x="170" y="18" fill="#475569" font-size="9" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" letter-spacing="1">nGDiT vs STABLE DIFFUSION</text>
           <!-- Header row -->
           <text x="130" y="36" fill="#ef4444" font-size="8" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600">SD 1.5</text>
-          <text x="220" y="36" fill="#00d4ff" font-size="8" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600">GDiT</text>
+          <text x="220" y="36" fill="#00d4ff" font-size="8" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600">nGDiT</text>
           <text x="290" y="36" fill="#10b981" font-size="8" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600">ADVANTAGE</text>
           <line x1="16" y1="42" x2="324" y2="42" stroke="#1e293b" stroke-width="1"/>
           <!-- Params -->
@@ -1714,7 +1714,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
         </g>
         <g transform="translate(896, 145)">
           <rect width="164" height="50" rx="8" fill="#0a0f18" stroke="#00d4ff" stroke-width="1.5"/>
-          <text x="82" y="18" fill="#00d4ff" font-size="9" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700">GDiT: Discrete masks</text>
+          <text x="82" y="18" fill="#00d4ff" font-size="9" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700">nGDiT: Discrete masks</text>
           <text x="82" y="32" fill="#64748b" font-size="7" text-anchor="middle" font-family="Inter,sans-serif">Categorical token space</text>
           <text x="82" y="44" fill="#00d4ff" font-size="7" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600">Designed for REASONING</text>
         </g>
@@ -1763,7 +1763,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
         <div class="timeline-dot" style="background:var(--accent2);"></div>
         <div class="timeline-title" style="color:var(--accent2);">Slick V3-mini</div>
         <div class="timeline-date">Mar&ndash;Apr 2026</div>
-        <div class="timeline-desc">2.5B cognitive mesh<br>GDiT reasoning engine<br>World model (mental sim)<br>First reasoning benchmarks</div>
+        <div class="timeline-desc">2.5B cognitive mesh<br>nGDiT reasoning engine<br>World model (mental sim)<br>First reasoning benchmarks</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot" style="background:var(--accent3);"></div>
@@ -1891,7 +1891,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
           <rect x="0" y="0" width="250" height="22" rx="10" fill="#6366f1" fill-opacity="0.08"/>
           <rect x="0" y="10" width="250" height="12" fill="#6366f1" fill-opacity="0.08"/>
           <text x="125" y="16" fill="#6366f1" font-size="10" text-anchor="middle" font-family="Inter,sans-serif" font-weight="700" letter-spacing="0.5">ARTIFICIAL PREFRONTAL CORTEX</text>
-          <text x="125" y="40" fill="#e2e8f0" font-size="12" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600">GDiT Reasoning Engine</text>
+          <text x="125" y="40" fill="#e2e8f0" font-size="12" text-anchor="middle" font-family="Inter,sans-serif" font-weight="600">nGDiT Reasoning Engine</text>
           <text x="125" y="58" fill="#94a3b8" font-size="10" text-anchor="middle" font-family="Inter,sans-serif">Iterative diffusion logic</text>
           <text x="125" y="76" fill="#64748b" font-size="9" text-anchor="middle" font-family="JetBrains Mono,monospace">5-step unmasking &middot; 300x faster</text>
           <text x="125" y="93" fill="#64748b" font-size="9" text-anchor="middle" font-family="JetBrains Mono,monospace">think &rarr; verify &rarr; revise &rarr; commit</text>
@@ -2170,7 +2170,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
               <strong style="color:var(--accent);">Artificial Occipital Lobe</strong> &mdash; PseudoDeepStack vision, multi-scale depth perception
             </div>
             <div style="font-size:12px; color:var(--muted); padding:8px 10px; background:rgba(255,255,255,0.02); border-radius:6px; border-left:2px solid var(--accent2);">
-              <strong style="color:var(--accent2);">Artificial Prefrontal Cortex</strong> &mdash; GDiT reasoning, metacognitive verification
+              <strong style="color:var(--accent2);">Artificial Prefrontal Cortex</strong> &mdash; nGDiT reasoning, metacognitive verification
             </div>
             <div style="font-size:12px; color:var(--muted); padding:8px 10px; background:rgba(255,255,255,0.02); border-radius:6px; border-left:2px solid var(--accent3);">
               <strong style="color:var(--accent3);">Artificial Hippocampus</strong> &mdash; Episodic memory, semantic recall, persistent identity
@@ -2190,7 +2190,7 @@ p { font-size: 18px; line-height: 1.6; color: var(--muted); max-width: 800px; }
         <p style="font-size:13px;">Modeled on the <strong style="color:var(--text);">artificial thalamus</strong> &mdash; the brain's central relay nucleus. Routes signals across the HULLHB Fabric to the right artificial nucleus at the right time. 4 reasoning modes (System 1, System 2, Tree Search, Memory) with <strong style="color:var(--orange);">mid-sequence switching</strong>. The router <em>learns</em> which nuclei to activate for each problem type.</p>
       </div>
       <div class="card" style="border-left:3px solid var(--accent); padding:20px;">
-        <h4 style="margin-bottom:8px; font-size:15px;">GDiT Reasoning Engine</h4>
+        <h4 style="margin-bottom:8px; font-size:15px;">nGDiT Reasoning Engine</h4>
         <p style="font-size:13px;">Discrete diffusion logic engine. 5-step iterative unmasking with grid-native 2D attention, confidence-based ordering, metacognitive re-masking. <strong style="color:var(--text);">300x faster</strong> than Stable Diffusion, 23x smaller. Processes the entire problem simultaneously &mdash; not left-to-right.</p>
       </div>
       <div class="card" style="border-left:3px solid var(--accent3); padding:20px;">
